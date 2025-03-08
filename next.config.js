@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     remotePatterns: [],
     unoptimized: true,  // This enables static exports of images
-    domains: ['localhost', 'tonikiku-landing-page-rnj9o3f9y-joshua-underwoods-projects.vercel.app'],
+    domains: ['localhost', 'tonikiku-landing-page-rnj9o3f9y-joshua-underwoods-projects.vercel.app', 'tonikiku-landing-page.vercel.app'],
   },
   productionBrowserSourceMaps: false,
   // Add explicit output configuration for Vercel

@@ -9,7 +9,7 @@ export function getBasePath() {
   }
   
   // Check if we're on Vercel (production)
-  const isVercel = process.env.VERCEL === '1';
+  const isVercel = process.env.VERCEL === '1' || process.env.NEXT_PUBLIC_VERCEL === '1';
   if (isVercel) {
     return '';  // No base path needed for Vercel
   }
@@ -29,7 +29,7 @@ export function assetPath(path: string) {
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   
   // Check if we're on Vercel
-  const isVercel = process.env.VERCEL === '1';
+  const isVercel = process.env.VERCEL === '1' || process.env.NEXT_PUBLIC_VERCEL === '1';
   if (isVercel) {
     return `/${cleanPath}`;  // Simple path for Vercel
   }

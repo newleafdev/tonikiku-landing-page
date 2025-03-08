@@ -20,7 +20,7 @@ export default function OptimizedImage({ src, alt, ...props }: OptimizedImagePro
       // Only process paths that are relative and in the public folder
       if (src.startsWith('/') && !src.startsWith('http')) {
         // Check if we're on Vercel
-        const isVercel = process.env.NEXT_PUBLIC_VERCEL === '1';
+        const isVercel = process.env.NEXT_PUBLIC_VERCEL === '1' || process.env.VERCEL === '1';
         if (isVercel) {
           // For Vercel, we can just use the path as is
           setImageSrc(src);
