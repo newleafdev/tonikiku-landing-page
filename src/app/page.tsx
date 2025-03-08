@@ -1,7 +1,7 @@
 'use client';
 
 import { FaBookOpen, FaHeadphones, FaSearch, FaHistory, FaChartLine, FaDownload, FaGamepad } from 'react-icons/fa';
-import { MdTouchApp, MdDevices } from 'react-icons/md';
+import { MdTouchApp } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Header from '@/components/Header';
