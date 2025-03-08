@@ -1,0 +1,29 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NETLIFY = "true"
+  NODE_VERSION = "18"
+
+# Handle client-side routing with proper fallbacks
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Handle asset paths properly
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/_next/static/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/static/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable" 

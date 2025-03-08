@@ -3,25 +3,26 @@
 import { motion } from 'framer-motion';
 import { useTheme } from './ThemeProvider';
 import ImageTabView from './ImageTabView';
+import { assetPath } from '@/utils/paths';
 
 export default function Hero() {
   const { theme } = useTheme();
   
   const heroImages = [
     {
-      src: "/images/ss1.jpeg",
+      src: assetPath("/images/ss1.jpeg"),
       alt: "とに聞くアプリのスクリーンショット 1",
       width: 280,
       height: 560
     },
     {
-      src: "/images/ss2.jpeg",
+      src: assetPath("/images/ss2.jpeg"),
       alt: "とに聞くアプリのスクリーンショット 2",
       width: 280,
       height: 560
     },
     {
-      src: "/images/ss3.jpeg",
+      src: assetPath("/images/ss3.jpeg"),
       alt: "とに聞くアプリのスクリーンショット 3",
       width: 280,
       height: 560

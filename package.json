@@ -7,8 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "export": "next build",
+    "predeploy": "npm run build && touch out/.nojekyll",
     "deploy": "gh-pages -d out",
-    "export": "next build"
+    "deploy:github": "DEPLOY_TARGET=github npm run deploy",
+    "deploy:netlify": "NETLIFY=true npm run build && netlify deploy --prod --dir=out",
+    "deploy:vercel": "vercel"
   },
   "dependencies": {
     "framer-motion": "^12.4.10",
@@ -27,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
     "gh-pages": "^6.3.0",
+    "netlify-cli": "^19.0.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

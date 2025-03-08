@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from './ThemeProvider';
+import OptimizedImage from './OptimizedImage';
 
 interface ImageTabViewProps {
   images: {
@@ -53,7 +53,7 @@ export default function ImageTabView({
             transition={{ duration: 0.3 }}
             className="w-full h-full"
           >
-            <Image
+            <OptimizedImage
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
               width={images[currentIndex].width}

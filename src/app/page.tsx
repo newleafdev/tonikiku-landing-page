@@ -3,7 +3,6 @@
 import { FaBookOpen, FaHeadphones, FaSearch, FaHistory, FaChartLine, FaDownload, FaGamepad } from 'react-icons/fa';
 import { MdTouchApp } from 'react-icons/md';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -13,6 +12,8 @@ import WhyChooseCard from '@/components/WhyChooseCard';
 import Footer from '@/components/Footer';
 import { useTheme } from '@/components/ThemeProvider';
 import ImageTabView from '@/components/ImageTabView';
+import OptimizedImage from '@/components/OptimizedImage';
+import { assetPath } from '@/utils/paths';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -20,19 +21,19 @@ export default function Home() {
   // Images for the How to Use section
   const howToUseImages1 = [
     {
-      src: "/images/image4.png",
+      src: assetPath("/images/image4.png"),
       alt: "アプリの使い方 1",
       width: 600,
       height: 800
     },
     {
-      src: "/images/image7.png",
+      src: assetPath("/images/image7.png"),
       alt: "アプリの使い方 2",
       width: 600,
       height: 800
     },
     {
-      src: "/images/image10.png",
+      src: assetPath("/images/image10.png"),
       alt: "アプリの使い方 3",
       width: 600,
       height: 800
@@ -41,19 +42,19 @@ export default function Home() {
   
   const howToUseImages2 = [
     {
-      src: "/images/image5.png",
+      src: assetPath("/images/image5.png"),
       alt: "アプリの使い方 4",
       width: 600,
       height: 800
     },
     {
-      src: "/images/image8.png",
+      src: assetPath("/images/image8.png"),
       alt: "アプリの使い方 5",
       width: 600,
       height: 800
     },
     {
-      src: "/images/image9.png",
+      src: assetPath("/images/image9.png"),
       alt: "アプリの使い方 6",
       width: 600,
       height: 800
@@ -63,13 +64,13 @@ export default function Home() {
   // Images for the Why Choose section
   const whyChooseImages = [
     {
-      src: "/images/image6.png",
+      src: assetPath("/images/image6.png"),
       alt: "進捗追跡 1",
       width: 600,
       height: 400
     },
     {
-      src: "/images/image3.png",
+      src: assetPath("/images/image3.png"),
       alt: "進捗追跡 2",
       width: 600,
       height: 400
@@ -164,12 +165,12 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="rounded-xl overflow-hidden shadow-2xl border border-brand-violet/20"
               >
-                <Image
-                  src="/images/image2.png"
+                <OptimizedImage
+                  src={assetPath("/images/image2.png")}
                   alt="アプリ内の読み物"
                   width={600}
                   height={400}
-                  className="w-full h-auto"
+                  className="rounded-xl shadow-lg w-full h-auto object-cover"
                 />
               </motion.div>
             </div>
@@ -184,12 +185,12 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="rounded-xl overflow-hidden shadow-2xl border border-brand-orange/20 order-2 md:order-1"
               >
-                <Image
-                  src="/images/image3.png"
+                <OptimizedImage
+                  src={assetPath("/images/image3.png")}
                   alt="単語の定義"
                   width={600}
                   height={400}
-                  className="w-full h-auto"
+                  className="rounded-xl shadow-lg w-full h-auto object-cover"
                 />
               </motion.div>
               <div className="order-1 md:order-2">
@@ -430,8 +431,8 @@ export default function Home() {
                   <div className={`w-20 h-1 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'} rounded-full`}></div>
                 </div>
                 <div className="w-full h-full flex items-center justify-center pt-4">
-                  <Image
-                    src="/images/ss4.jpeg"
+                  <OptimizedImage
+                    src={assetPath("/images/ss4.jpeg")}
                     alt="とに聞くアプリのスクリーンショット"
                     width={280}
                     height={560}
