@@ -3,24 +3,55 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-violet: #8A2BE2;
+  --brand-orange: #FF8C00;
+  --brand-violet-light: #9D4EFF;
+  --brand-orange-light: #FFA333;
+  --card-bg: #f5f5f5;
+  --card-border: #e0e0e0;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-bg-scrolled: rgba(255, 255, 255, 0.95);
+  --header-shadow: rgba(138, 43, 226, 0.1);
+}
+
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #1a1a1a;
+  --card-border: #333333;
+  --header-bg: transparent;
+  --header-bg-scrolled: rgba(10, 10, 10, 0.95);
+  --header-shadow: rgba(138, 43, 226, 0.1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-violet: var(--brand-violet);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-violet-light: var(--brand-violet-light);
+  --color-brand-orange-light: var(--brand-orange-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-jp: var(--font-noto-sans-jp);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jp), var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-gradient-violet-orange {
+    background: linear-gradient(90deg, var(--brand-violet) 0%, var(--brand-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }

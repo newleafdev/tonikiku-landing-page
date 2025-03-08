@@ -1,24 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# とに聞く - 英語学習アプリのランディングページ
 
-## Getting Started
+このプロジェクトは「とに聞く」英語学習アプリのランディングページです。自然な方法で英語を学ぶためのアプリの特徴や使い方を紹介しています。
 
-First, run the development server:
+## 技術スタック
+
+- [Next.js](https://nextjs.org/) - Reactフレームワーク
+- [TypeScript](https://www.typescriptlang.org/) - 型安全なJavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - ユーティリティファーストのCSSフレームワーク
+- [Framer Motion](https://www.framer.com/motion/) - アニメーションライブラリ
+- [React Icons](https://react-icons.github.io/react-icons/) - アイコンライブラリ
+
+## 機能
+
+- レスポンシブデザイン
+- スクロールアニメーション
+- モダンなUI/UX
+- 日本語フォントのサポート
+
+## 開発環境のセットアップ
 
 ```bash
+# リポジトリをクローン
+git clone https://github.com/yourusername/tonikiku-landing-page.git
+cd tonikiku-landing-page
+
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いて結果を確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ビルド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# 本番用ビルド
+npm run build
+
+# 本番環境の起動
+npm run start
+```
+
+## プロジェクト構造
+
+- `src/app` - Next.js App Routerのメインファイル
+- `src/components` - 再利用可能なコンポーネント
+- `public` - 静的アセット
+
+## ライセンス
+
+このプロジェクトは [MIT License](LICENSE) の下でライセンスされています。
 
 ## Learn More
 
