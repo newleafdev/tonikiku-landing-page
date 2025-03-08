@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import { useTheme } from '@/components/ThemeProvider';
 import ImageTabView from '@/components/ImageTabView';
 import OptimizedImage from '@/components/OptimizedImage';
+import ListeningTimeTracker from '@/components/ListeningTimeTracker';
 import { assetPath } from '@/utils/paths';
 
 export default function Home() {
@@ -226,6 +227,28 @@ export default function Home() {
             <p className={`max-w-2xl mx-auto text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
               「とにかく聞いてね」は簡単に使えるよ。以下のステップに従って、英語学習の新しい旅を始めよう！
             </p>
+          </AnimatedSection>
+          
+          {/* Listening Time Tracker Component */}
+          <AnimatedSection className="mb-16">
+            <div className="max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <h3 className={`text-2xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
+                    毎日の進捗を視覚的に把握
+                  </h3>
+                  <p className="mb-4">
+                    「とにかく聞いてね」では、あなたの日々のリスニング時間を簡単に記録・可視化します。目標を設定して、日々の積み重ねを実感しましょう。
+                  </p>
+                  <p>
+                    15分の毎日のリスニングで、あなたの英語力は着実に向上します。小さな継続が大きな変化をもたらすのです。
+                  </p>
+                </div>
+                <div>
+                  <ListeningTimeTracker goalMinutes={15} animationDuration={10} />
+                </div>
+              </div>
+            </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
