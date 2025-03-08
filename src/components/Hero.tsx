@@ -12,20 +12,20 @@ export default function Hero() {
     {
       src: assetPath("/images/ss1.jpeg"),
       alt: "とに聞くアプリのスクリーンショット 1",
-      width: 280,
-      height: 560
+      width: 240,
+      height: 480
     },
     {
       src: assetPath("/images/ss2.jpeg"),
       alt: "とに聞くアプリのスクリーンショット 2",
-      width: 280,
-      height: 560
+      width: 240,
+      height: 480
     },
     {
       src: assetPath("/images/ss3.jpeg"),
       alt: "とに聞くアプリのスクリーンショット 3",
-      width: 280,
-      height: 560
+      width: 240,
+      height: 480
     }
   ];
   
@@ -101,7 +101,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className={`relative w-[280px] h-[560px] ${theme === 'dark' ? 'bg-black border-gray-800' : 'bg-gray-100 border-gray-300'} rounded-[40px] border-4 overflow-hidden shadow-2xl`}>
+            <div className={`relative w-[240px] h-[480px] ${theme === 'dark' ? 'bg-black border-gray-800' : 'bg-gray-100 border-gray-300'} rounded-[40px] border-4 overflow-hidden shadow-2xl`}>
               <div className={`absolute top-0 left-0 right-0 h-6 ${theme === 'dark' ? 'bg-black' : 'bg-gray-100'} rounded-t-[30px] flex justify-center items-end pb-1 z-10`}>
                 <div className={`w-20 h-1 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'} rounded-full`}></div>
               </div>

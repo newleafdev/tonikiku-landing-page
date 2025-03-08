@@ -14,6 +14,7 @@ import { useTheme } from '@/components/ThemeProvider';
 import ImageTabView from '@/components/ImageTabView';
 import OptimizedImage from '@/components/OptimizedImage';
 import ListeningTimeTracker from '@/components/ListeningTimeTracker';
+import WeeklyListeningChart from '@/components/WeeklyListeningChart';
 import { assetPath } from '@/utils/paths';
 
 export default function Home() {
@@ -24,20 +25,20 @@ export default function Home() {
     {
       src: assetPath("/images/image4.png"),
       alt: "アプリの使い方 1",
-      width: 600,
-      height: 800
+      width: 450,
+      height: 600
     },
     {
       src: assetPath("/images/image7.png"),
       alt: "アプリの使い方 2",
-      width: 600,
-      height: 800
+      width: 450,
+      height: 600
     },
     {
       src: assetPath("/images/image10.png"),
       alt: "アプリの使い方 3",
-      width: 600,
-      height: 800
+      width: 450,
+      height: 600
     }
   ];
   
@@ -45,20 +46,20 @@ export default function Home() {
     {
       src: assetPath("/images/image5.png"),
       alt: "アプリの使い方 4",
-      width: 600,
-      height: 800
+      width: 450,
+      height: 600
     },
     {
       src: assetPath("/images/image8.png"),
       alt: "アプリの使い方 5",
-      width: 600,
-      height: 800
+      width: 450,
+      height: 600
     },
     {
       src: assetPath("/images/image9.png"),
       alt: "アプリの使い方 6",
-      width: 600,
-      height: 800
+      width: 450,
+      height: 600
     }
   ];
   
@@ -67,14 +68,14 @@ export default function Home() {
     {
       src: assetPath("/images/image6.png"),
       alt: "進捗追跡 1",
-      width: 600,
-      height: 400
+      width: 450,
+      height: 300
     },
     {
       src: assetPath("/images/image3.png"),
       alt: "進捗追跡 2",
-      width: 600,
-      height: 400
+      width: 450,
+      height: 300
     }
   ];
   
@@ -169,8 +170,8 @@ export default function Home() {
                 <OptimizedImage
                   src={assetPath("/images/image2.png")}
                   alt="アプリ内の読み物"
-                  width={600}
-                  height={400}
+                  width={450}
+                  height={300}
                   className="rounded-xl shadow-lg w-full h-auto object-cover"
                 />
               </motion.div>
@@ -189,8 +190,8 @@ export default function Home() {
                 <OptimizedImage
                   src={assetPath("/images/image3.png")}
                   alt="単語の定義"
-                  width={600}
-                  height={400}
+                  width={450}
+                  height={300}
                   className="rounded-xl shadow-lg w-full h-auto object-cover"
                 />
               </motion.div>
@@ -246,6 +247,28 @@ export default function Home() {
                 </div>
                 <div>
                   <ListeningTimeTracker goalMinutes={15} animationDuration={10} />
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+          
+          {/* Weekly Listening Chart */}
+          <AnimatedSection className="mb-16">
+            <div className="max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <WeeklyListeningChart animationDuration={10} />
+                </div>
+                <div className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <h3 className={`text-2xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
+                    週間の学習を追跡
+                  </h3>
+                  <p className="mb-4">
+                    過去一週間のリスニング時間をグラフで確認できます。学習パターンを把握して、より効果的な学習計画を立てましょう。
+                  </p>
+                  <p>
+                    曜日ごとの学習時間を比較することで、自分の学習リズムを理解し、継続的な英語力向上につなげることができます。
+                  </p>
                 </div>
               </div>
             </div>
@@ -457,8 +480,8 @@ export default function Home() {
                   <OptimizedImage
                     src={assetPath("/images/ss4.jpeg")}
                     alt="とに聞くアプリのスクリーンショット"
-                    width={280}
-                    height={560}
+                    width={240}
+                    height={480}
                     className="object-cover"
                   />
                 </div>
