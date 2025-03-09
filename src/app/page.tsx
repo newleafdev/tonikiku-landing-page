@@ -91,7 +91,7 @@ export default function Home() {
           <div className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-brand-orange/10 blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10">
           <AnimatedSection className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>主な特徴</h2>
             <p className={`max-w-2xl mx-auto ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -119,8 +119,8 @@ export default function Home() {
               delay={0.3}
             />
             <FeatureCard
-              title="復習機能"
-              description="調べたフレーズを自動で記録し、記事を復習プレイリストに追加できるよ。"
+              title="オーディオ復習機能"
+              description="復習リストに追加した記事を、音声で聞くことができるよ。どこでもいつでも英語の復習ことができますから、あなたの忙しい生活にぴったりです。"
               icon={<FaHistory />}
               delay={0.4}
             />
@@ -143,20 +143,37 @@ export default function Home() {
               <div>
                 <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>アプリ内の読み物</h3>
                 <p className={`mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  様々なレベルの読み物を用意しています。初心者から上級者まで、自分のレベルに合った内容で英語を学べます。
+                このリーディング教材で、あなたの英語力をグッと伸ばそう！
                 </p>
+                <p>
+                「とに聞く」の学習教材には、3つのユニークな特徴があります。
+                </p>
+                <br></br>
+                <p>
+                まず、各トピックには4つの難易度レベルがあり、簡単なものから挑戦的なものまで揃っています。これによって、自分に合ったレベルを見つけ、読んでいる内容をしっかり理解した上で、次のレベルに自信を持って挑戦できます。この仕組みなら、内容を正確に理解できるか心配することなく、言語そのものの学習に集中できます。
+                </p><br></br>
+                <p>
+                次に、各記事は短めに作られています。新しい記事を数分で勉強して、自分の復習プレイリストに追加できます。これなら、忙しいスケジュールのちょっとした隙間時間や、英語に集中できる数分の空き時間に気軽に英語学習を組み込めます。机に座って分厚い教科書を開く必要はなく、アプリが次の記事へと自然に導いてくれるので、自分のペースで好きなだけ勉強できます。
+                </p><br></br>
+                <p>
+                最後に、記事は日本人にとって身近なトピックで書かれています。最初のシリーズでは、たった800円で全記事にアクセスでき、すでに知っている話題を通じて英語を学べます。これにより、言語そのものに集中でき、国際交流の場で役立つスキルが身につきます。例えば、外国人と話すとき、日本の生活に興味を持った相手と会話することがよくあります。この教材なら、会話の幅を広げ、より深い話題を楽しめるようになります。
+                </p><br></br>
                 <ul className={`space-y-3 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-violet">✓</span> 日常会話
+                    <span className="text-brand-violet">✓</span> 自分にピッタリのレベルが見つかる！
+                    4段階の難易度（簡単～挑戦的）で、理解度に合わせてステップアップ。言語学習に集中できる！
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-violet">✓</span> 旅行英語
+                    <span className="text-brand-violet">✓</span> スキマ時間でサクッと勉強！
+                    短い記事だから数分でOK。アプリで次の記事へ進めて、自分のペースで復習も簡単！
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-violet">✓</span> ビジネス英語
+                    <span className="text-brand-violet">✓</span> 日本人になじみ深い話題で学べる！
+                    身近なテーマで英語をマスター。国際交流で「日本のこと」を自信を持って話せる！
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-violet">✓</span> 文化と習慣
+                    <span className="text-brand-violet">✓</span> お手軽価格でスタート！
+                    初シリーズ完全アクセスがたった800円。気軽に始めて、会話の幅を広げよう！
                   </li>
                 </ul>
               </div>
@@ -168,7 +185,7 @@ export default function Home() {
                 className="rounded-xl overflow-hidden shadow-2xl border border-brand-violet/20"
               >
                 <OptimizedImage
-                  src={assetPath("/images/image2.png")}
+                  src={assetPath("/images/image5.png")}
                   alt="アプリ内の読み物"
                   width={450}
                   height={300}
@@ -222,7 +239,7 @@ export default function Home() {
 
       {/* How to Use Section */}
       <section id="how-to-use" className={`py-20 ${theme === 'dark' ? 'bg-black/50' : 'bg-gray-50'}`}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <AnimatedSection className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>使い方</h2>
             <p className={`max-w-2xl mx-auto text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -352,7 +369,7 @@ export default function Home() {
           <div className="absolute bottom-1/3 right-1/3 w-96 h-96 rounded-full bg-brand-orange/10 blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10">
           <AnimatedSection className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>なぜ「とにかく聞いてね」なのか？</h2>
             <p className={`max-w-2xl mx-auto text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -419,7 +436,7 @@ export default function Home() {
 
       {/* Download Section */}
       <section id="download" className={`py-20 ${theme === 'dark' ? 'bg-gradient-to-r from-brand-violet/20 to-brand-orange/20' : 'bg-gradient-to-r from-brand-violet/10 to-brand-orange/10'}`}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>「とにかく聞いてね」をダウンロード</h2>
             <p className={`mb-8 text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>

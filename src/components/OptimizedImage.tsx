@@ -1,10 +1,10 @@
 'use client';
 
-import Image, { ImageProps } from 'next/image';
+import Image from 'next/image';
 import { getPublicPath } from '@/utils/publicPath';
 import { useState, useEffect } from 'react';
 
-interface OptimizedImageProps extends Omit<ImageProps, 'src'> {
+interface OptimizedImageProps extends Omit<React.ComponentProps<typeof Image>, 'src'> {
   src: string;
 }
 
@@ -17,21 +17,14 @@ export default function OptimizedImage({ src, alt, ...props }: OptimizedImagePro
   useEffect(() => {
     // On client side, use the publicPath utility
     if (typeof window !== 'undefined') {
-      // Only process paths that are relative and in the public folder
-      if (src.startsWith('/') && !src.startsWith('http')) {
-        // Check if we're on Vercel
-        const isVercel = process.env.NEXT_PUBLIC_VERCEL === '1' || process.env.VERCEL === '1';
-        if (isVercel) {
-          // For Vercel, we can just use the path as is
-          setImageSrc(src);
-        } else {
-          // For other environments, use the publicPath utility
-          setImageSrc(getPublicPath(src));
-        }
+      // Skip processing for URLs that are already absolute
+      if (!src.startsWith('http://') && !src.startsWith('https://')) {
+        setImageSrc(getPublicPath(src));
       }
     }
   }, [src]);
   
+  // Handle static exports with unoptimized flag
   return (
     <Image
       src={imageSrc}

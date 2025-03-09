@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer className={`${theme === 'dark' ? 'bg-black' : 'bg-gray-50'} py-12 border-t ${theme === 'dark' ? 'border-brand-violet/20' : 'border-gray-200'}`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <motion.div

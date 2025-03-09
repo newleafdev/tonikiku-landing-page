@@ -32,7 +32,7 @@ export default function Header() {
         ? `${theme === 'dark' ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-md py-3 shadow-lg shadow-brand-violet/10` 
         : `${theme === 'dark' ? 'bg-transparent' : 'bg-white/50 backdrop-blur-sm'} py-4`
     }`}>
-      <div className="container mx-auto px-6 flex justify-between items-center h-14">
+      <div className="container mx-auto flex justify-between items-center h-14">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -129,7 +129,7 @@ export default function Header() {
           exit={{ opacity: 0, height: 0 }}
           className={`md:hidden ${theme === 'dark' ? 'bg-black/95' : 'bg-white/95'} backdrop-blur-md`}
         >
-          <div className="container mx-auto px-6 py-5 space-y-5">
+          <div className="container mx-auto py-5 space-y-5">
             <MobileNavLink href="#features" onClick={() => setIsMenuOpen(false)}>特徴</MobileNavLink>
             <MobileNavLink href="#how-to-use" onClick={() => setIsMenuOpen(false)}>使い方</MobileNavLink>
             <MobileNavLink href="#why" onClick={() => setIsMenuOpen(false)}>なぜ選ぶ？</MobileNavLink>

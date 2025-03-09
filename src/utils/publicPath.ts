@@ -44,7 +44,18 @@ export function getPublicPath(path: string): string {
     return cleanPath;
   }
   
-  // For public assets
+  // Check if we're on Vercel
+  const isVercel = process.env.NEXT_PUBLIC_VERCEL === '1' || process.env.VERCEL === '1';
+  if (isVercel) {
+    return `/${cleanPath}`;
+  }
+  
+  // For development environment
+  if (process.env.NODE_ENV !== 'production') {
+    return `/${cleanPath}`;
+  }
+  
+  // For public assets in production (GitHub Pages)
   const baseUrl = getBaseUrl();
   return `${baseUrl}${cleanPath}`;
 } 
