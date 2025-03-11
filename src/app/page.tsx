@@ -23,19 +23,19 @@ export default function Home() {
   // Images for the How to Use section
   const howToUseImages1 = [
     {
-      src: assetPath("/images/image4.png"),
+      src: assetPath("/images/image5_blank.png"),
       alt: "アプリの使い方 1",
       width: 450,
       height: 600
     },
     {
-      src: assetPath("/images/image7.png"),
+      src: assetPath("/images/image1_blank.png"),
       alt: "アプリの使い方 2",
       width: 450,
       height: 600
     },
     {
-      src: assetPath("/images/image10.png"),
+      src: assetPath("/images/image4_blank.png"),
       alt: "アプリの使い方 3",
       width: 450,
       height: 600
@@ -44,20 +44,14 @@ export default function Home() {
   
   const howToUseImages2 = [
     {
-      src: assetPath("/images/image5.png"),
+      src: assetPath("/images/image2_blank.png"),
       alt: "アプリの使い方 4",
       width: 450,
       height: 600
     },
     {
-      src: assetPath("/images/image8.png"),
+      src: assetPath("/images/playlist.jpeg"),
       alt: "アプリの使い方 5",
-      width: 450,
-      height: 600
-    },
-    {
-      src: assetPath("/images/image9.png"),
-      alt: "アプリの使い方 6",
       width: 450,
       height: 600
     }
@@ -66,13 +60,13 @@ export default function Home() {
   // Images for the Why Choose section
   const whyChooseImages = [
     {
-      src: assetPath("/images/image6.png"),
+      src: assetPath("/images/image7_blank.png"),
       alt: "進捗追跡 1",
       width: 450,
       height: 300
     },
     {
-      src: assetPath("/images/image3.png"),
+      src: assetPath("/images/image8_blank.png"),
       alt: "進捗追跡 2",
       width: 450,
       height: 300
@@ -213,41 +207,41 @@ export default function Home() {
                 />
               </motion.div>
               <div className="order-1 md:order-2">
-                <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>タップで単語の意味を確認</h3>
+                <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>タップで単語だけではんくフレーズの意味を確認</h3>
                 <p className={`mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  知らない単語があれば、タップするだけで意味を確認できます。読書の流れを中断することなく、スムーズに学習を続けられます。
+                この新機能「タップで単語だけでなくフレーズの意味を確認」は、皆様の語学学習を飛躍的に向上させるための素晴らしいツールです。以下に、この機能がどのように貴重な価値を提供するのか、詳しくご説明いたします。
                 </p>
                 <ul className={`space-y-3 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-orange">✓</span> 日本語の意味をすぐに確認
+                    <span className="text-brand-orange">✓</span>  認知負荷（短期記憶）の軽減
                   </li>
+                  <p>従来の学習方法では、単語一つ一つを個別に記憶し、その意味を頭の中で組み立てる必要がありました。しかし、この新機能では、たった一回のタップでフレーズ全体の意味を瞬時に確認できます。これにより、脳が一度に処理する情報量が減少し、認知負荷が大幅に軽減されます。短期記憶に頼る負担が減ることで、より快適に学習を進めることが可能です。 </p>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-orange">✓</span> 例文で使い方を理解
+                    <span className="text-brand-orange">✓</span> 脳の自然な言語処理スキーマに適合
                   </li>
+                  <p>人間の脳は、単語の羅列よりもフレーズや文脈の中で意味を理解する方が自然です。この機能は、フレーズ単位で意味を提供することで、脳の言語処理に最適化された学習体験を提供します。自然な流れで情報を吸収できるため、学習効率が向上し、ストレスなく知識が定着します。 </p>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-orange">✓</span> 自動で単語を記録
+                    <span className="text-brand-orange">✓</span> チャンキングによる記憶力の向上
                   </li>
+                  <p>心理学に基づく「チャンキング（塊化）」の原理を活用し、単語を個別に覚えるのではなく、フレーズ単位で記憶することが可能です。たとえば、「New Year ・ Shōgatsu ・ is a ・ big holiday ・ in Japan.」のように、・（ナカグロ）で明確に区切られたフレーズをタップするだけで意味が把握でき、これが記憶の「塊」として脳に刻まれます。この方法は、単語をバラバラに覚えるよりも長期的な記憶を強化し、復習の時間を大幅に節約します。</p>
                   <li className="flex items-center gap-2">
-                    <span className="text-brand-orange">✓</span> 復習リストに追加
+                    <span className="text-brand-orange">✓</span> タップ可能なフレーズの明確な区別
                   </li>
+                  <p>フレーズは・（ナカグロ）で明確に区切られており、一目でタップ対象が分かります。この視覚的な区切りは、学習者がどの部分をタップすれば意味を確認できるかを直感的に理解しやすくし、操作ミスを防ぎます。シンプルで直感的なデザインにより、初心者から上級者までスムーズに利用できる点が大きな利点です。</p>
+                  <li className="flex items-center gap-2">
+                    <span className="text-brand-orange">✓</span> 学習の柔軟性と効率性の向上
+                  </li>
+                  <p>この機能は、忙しい日常生活の中でもスキマ時間に活用できる柔軟性を持っています。電車の中や休憩時間にスマートフォンでタップするだけで、深い理解が得られるため、学習のペースを自分に合わせて調整可能です。また、フレーズごとの意味確認が瞬時にできるため、従来の辞書引きや文法解析に時間をかける必要がなく、学習効率が飛躍的に向上します。</p>
                 </ul>
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
 
-      {/* How to Use Section */}
-      <section id="how-to-use" className={`py-20 ${theme === 'dark' ? 'bg-black/50' : 'bg-gray-50'}`}>
-        <div className="container mx-auto">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>使い方</h2>
-            <p className={`max-w-2xl mx-auto text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-              「とにかく聞いてね」は簡単に使えるよ。以下のステップに従って、英語学習の新しい旅を始めよう！
-            </p>
-          </AnimatedSection>
-          
-          {/* Listening Time Tracker Component */}
+          <AnimatedSection className="mt-20">
+            <div className="grid grid-cols-1 gap-12 items-center">
+              <div>
+                <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>Myデータは自動的に保存されますが当社はお客様の情報を収集しません</h3>
+                {/* Listening Time Tracker Component */}
           <AnimatedSection className="mb-16">
             <div className="max-w-3xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -290,6 +284,23 @@ export default function Home() {
               </div>
             </div>
           </AnimatedSection>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* How to Use Section */}
+      <section id="how-to-use" className={`py-20 ${theme === 'dark' ? 'bg-black/50' : 'bg-gray-50'}`}>
+        <div className="container mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>使い方</h2>
+            <p className={`max-w-2xl mx-auto text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+              「とにかく聞いてね」は簡単に使えるよ。以下のステップに従って、英語学習の新しい旅を始めよう！
+            </p>
+          </AnimatedSection>
+          
+          
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div className="space-y-12">
@@ -447,15 +458,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">
               <motion.a
-                href="#"
+                href="https://apps.apple.com/jp/app/%E8%8B%B1%E8%AA%9E%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%AA%E3%82%89%E3%81%93%E3%82%8C-%E3%81%A8%E3%81%AB%E3%81%8B%E3%81%8F%E8%81%9E%E3%81%84%E3%81%A6%E3%81%AD/id6742870240?l=en-US"
                 className={`flex items-center justify-center gap-3 px-8 py-5 rounded-xl ${theme === 'dark' ? 'bg-gradient-to-br from-brand-violet to-brand-violet/80' : 'bg-gradient-to-br from-brand-violet to-brand-violet/90'} text-white font-semibold text-lg shadow-lg ${theme === 'dark' ? 'shadow-brand-violet/30' : 'shadow-brand-violet/20'} hover:shadow-xl hover:shadow-brand-violet/40 transition-all duration-300 border border-white/10`}
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
-                  <path d="M17.5,1H6.5C3.4,1,1,3.4,1,6.5v11C1,20.6,3.4,23,6.5,23h11c3.1,0,5.5-2.4,5.5-5.5v-11C23,3.4,20.6,1,17.5,1z M12,18.8 c-0.1,0-0.2,0-0.3,0c-0.1,0-0.2,0-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.2-0.2c-0.1-0.1-0.1-0.1-0.2-0.2 c-0.1-0.1-0.1-0.2-0.1-0.2c0-0.1-0.1-0.2-0.1-0.3c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0.1-0.2,0.1-0.2 c0-0.1,0.1-0.2,0.2-0.2c0.1-0.1,0.1-0.1,0.2-0.2c0.1-0.1,0.2-0.1,0.2-0.1c0.1,0,0.2-0.1,0.3-0.1c0.1,0,0.2,0,0.3,0 c0.1,0,0.2,0,0.3,0c0.1,0,0.2,0,0.3,0.1c0.1,0,0.2,0.1,0.3,0.1c0.1,0,0.2,0.1,0.2,0.2c0.1,0.1,0.1,0.1,0.2,0.2 c0.1,0.1,0.1,0.2,0.1,0.2c0,0.1,0.1,0.2,0.1,0.3c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2-0.1,0.3c0,0.1-0.1,0.2-0.1,0.2 c0,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.2,0.1-0.2,0.1c-0.1,0-0.2,0.1-0.3,0.1C12.2,18.8,12.1,18.8,12,18.8z M8.7,4.9c-0.2,0.2-0.3,0.5-0.3,0.9c0,0.3,0.1,0.6,0.3,0.8c0.2,0.2,0.5,0.3,0.9,0.3c0.3,0,0.6-0.1,0.8-0.3C10.6,6.4,10.7,6.1,10.7,5.8 c0-0.3-0.1-0.6-0.3-0.8C10.2,4.7,9.9,4.6,9.5,4.6C9.2,4.6,8.9,4.7,8.7,4.9z M9,8.2v7.6h1.1V8.2H9z M13.8,8.2h-1.1v7.6h1.1v-4 c0-0.5,0.1-0.8,0.2-1.1c0.1-0.3,0.3-0.5,0.6-0.6c0.2-0.1,0.5-0.2,0.8-0.2c0.5,0,0.9,0.2,1.2,0.5c0.3,0.3,0.4,0.8,0.4,1.5v3.9h1.1v-4.2 c0-0.5-0.1-0.9-0.2-1.3c-0.1-0.4-0.3-0.7-0.6-0.9c-0.3-0.2-0.6-0.4-0.9-0.5c-0.4-0.1-0.8-0.2-1.2-0.2c-0.3,0-0.6,0-0.9,0.1 c-0.3,0.1-0.5,0.2-0.7,0.3c-0.2,0.1-0.4,0.3-0.5,0.5c-0.1,0.2-0.2,0.4-0.3,0.6V8.2z"></path>
+                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.08-.46-2.07-.48-3.2 0-1.42.63-2.17.53-3.08-.35-4.06-4.16-3.58-10.8.92-11.44 1.16-.08 2.04.41 2.95.5.89.07 1.8-.45 3.03-.37.95.07 1.77.4 2.44.93-.08.05-1.45.87-1.43 2.55.02 2.26 1.94 3.04 1.96 3.06-.05.92-.43 2.02-1.05 2.83-.82 1.11-1.72 2-3.46 1.94zM12.03 6.3c-.13-1.07.39-2.21.89-2.91.6-.82 1.66-1.45 2.52-1.49.1 1.2-.34 2.38-.9 3.24-.56.87-1.51 1.55-2.51 1.16z"/>
                 </svg>
-                <span>LinkedIn でダウンロード</span>
+                <span>App Store でダウンロード</span>
               </motion.a>
               <motion.a
                 href="#"
@@ -466,7 +477,7 @@ export default function Home() {
                 <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path>
                 </svg>
-                <span>近日公開</span>
+                <span>現在公開中</span>
                 
               </motion.a>
               
@@ -478,7 +489,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <div className={`text-center md:text-left ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} text-sm`}>
-                  <p>* アプリストアでも近日公開予定</p>
+                  <p>* Androidでも近日公開予定</p>
                 </div>
               </motion.div>
             </div>
@@ -489,20 +500,13 @@ export default function Home() {
               viewport={{ once: true }}
               className="flex justify-center"
             >
-              <div className={`relative w-[280px] h-[560px] ${theme === 'dark' ? 'bg-black border-gray-800' : 'bg-gray-100 border-gray-300'} rounded-[40px] border-4 overflow-hidden shadow-2xl`}>
-                <div className={`absolute top-0 left-0 right-0 h-6 ${theme === 'dark' ? 'bg-black' : 'bg-gray-100'} rounded-t-[30px] flex justify-center items-end pb-1`}>
-                  <div className={`w-20 h-1 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'} rounded-full`}></div>
-                </div>
-                <div className="w-full h-full flex items-center justify-center pt-4">
-                  <OptimizedImage
-                    src={assetPath("/images/ss4.jpeg")}
-                    alt="とに聞くアプリのスクリーンショット"
-                    width={240}
-                    height={480}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+              <OptimizedImage
+                src={assetPath("/images/image2.png")}
+                alt="とに聞くアプリのスクリーンショット"
+                width={500}
+                height={500}
+                className="rounded-xl shadow-2xl"
+              />
             </motion.div>
           </div>
         </div>

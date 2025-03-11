@@ -26,9 +26,8 @@ export default function Footer() {
                 読んで聞いて、自然に学ぶ英語学習アプリ
               </p>
               <div className="flex space-x-4">
-                <SocialIcon href="#" icon="twitter" />
-                <SocialIcon href="#" icon="instagram" />
-                <SocialIcon href="#" icon="facebook" />
+                <SocialIcon href="https://x.com/tonikakuKiiteNe" icon="twitter" />
+                <SocialIcon href="https://www.instagram.com/newleafsensei/" icon="instagram" />
               </div>
             </motion.div>
           </div>
@@ -59,10 +58,10 @@ export default function Footer() {
             >
               <h3 className={`${theme === 'dark' ? 'text-white' : 'text-gray-800'} font-bold mb-4 text-lg`}>お問い合わせ</h3>
               <ul className="space-y-2">
-                <FooterLink href="#">プライバシーポリシー</FooterLink>
-                <FooterLink href="#">利用規約</FooterLink>
-                <FooterLink href="#">サポート</FooterLink>
-                <FooterLink href="#">お問い合わせ</FooterLink>
+                <FooterLink href="https://newleafdev.github.io/tonikiku-privacy-policy/">プライバシーポリシー</FooterLink>
+                
+                <FooterLink href="https://newleafdev.github.io/tonikiku-support-page/">サポート</FooterLink>
+                
               </ul>
             </motion.div>
           </div>
